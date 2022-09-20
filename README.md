@@ -13,12 +13,17 @@ A standalone resource where the player accesses a computer system (can be change
 - Earning "Hacking" XP via performing successful hacks unlocks harder hacks (which can be customised) producing better probabilities of better hack returns i.e. more rare USB outputs. All hack difficulty variables are set via config.lua
 
 ## Dependencies
-- mz-skills (a modified version of qb-skillz (now B1-skillz) made and distributed by Kings#4220 of Burn One Studios - accessible at: https://github.com/Burn-One-Studios/B1-skillz)
-- progressbar
-- qb-target
-- mhacking
-- ps-ui
-- OPTIONAL: (Configured to work with okokNotify as well as base qb-core notifications).
+**[mz-skills](https://github.com/MrZainRP/mz-skills)** - to track skill progress. All credit to Kings#4220 for the original qb-skillz now **[B1-skillz](https://github.com/Burn-One-Studios/B1-skillz)**
+
+**[progressbar](https://github.com/qbcore-framework/progressbar)**
+
+**[qb-target](https://github.com/qbcore-framework/qb-target)**
+
+**[qb-skillbar](https://github.com/qbcore-framework/qb-skillbar)**
+
+**[ps-ui]**(https://github.com/Project-Sloth/ps-ui)**
+ 
+OPTIONAL: (Configured to work with okokNotify as well as base qb-core notifications).
 
 ## Installation Instruction
 
