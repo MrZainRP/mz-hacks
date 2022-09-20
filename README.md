@@ -50,7 +50,7 @@ C. "USB2" IS USED BY THE MZ-STOREROBBERY FORK;
 
 D. "USB3" IS USED BY DRUG RELATED MZ-RESOURCES (E.G. MZ-COKE, MZ-HEROIN, MZ-METH, MZ-LSD);
 
-D. "YELLOWDONGLE" IS USED BY MZ-ATMROBBERY; 
+E. "YELLOWDONGLE" IS USED BY MZ-ATMROBBERY; 
 
 4. If your server does not have any use for some of these USB items please replace them in the config.lua. 
 
