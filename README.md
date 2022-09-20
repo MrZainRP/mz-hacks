@@ -2,8 +2,9 @@
 
 A reworked mz-usbhacks resource to facilitate more hacking options, easier difficulty modifications and a non-mz-skills option. Optimised for the latest qb-core with deprecated functions removed. 
 
-https://i.imgur.com/7BnJC9v.png
 [![mz-hacks](https://i.imgur.com/7BnJC9v.png)](https://youtu.be/rPQJOHJVHuM "mz-hacks for FiveM by Mr_Zain#4139")
+
+PREVIEW: https://youtu.be/rPQJOHJVHuM
 
 - Highly customisable, almost all aspects of each hack available set via config.lua;
 - Optimised to operate at resmon 0.00 idle; 
