@@ -41,10 +41,15 @@ A standalone resource where the player accesses a computer system (can be change
 ```
 
 Please note: 
+
 A. IF YOU ARE RUNNING MZ-BINS YOU DO NOT NEED TO RE-ADD THE "BLANKUSB" - BY DEFAULT, BLANKUSBs ARE FOUND IN BINS; 
+
 B. "TROJAN_USB" AND "CRYPTOSTICK" ARE DEFAULT QB-CORE ITEMS; 
+
 C. "USB2" IS USED BY THE MZ-STOREROBBERY FORK;
-D. "USB3" IS USED BY DRUG RELATED MZ-RESOURCES (E.G. MZ-COKE, MZ-HEROIN, MZ-METH, MZ-LSD)
+
+D. "USB3" IS USED BY DRUG RELATED MZ-RESOURCES (E.G. MZ-COKE, MZ-HEROIN, MZ-METH, MZ-LSD);
+
 D. "YELLOWDONGLE" IS USED BY MZ-ATMROBBERY; 
 
 4. If your server does not have any use for some of these USB items please replace them in the config.lua. 
