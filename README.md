@@ -21,7 +21,7 @@ A standalone resource where the player accesses a computer system (can be change
 
 **[qb-skillbar](https://github.com/qbcore-framework/qb-skillbar)**
 
-**[ps-ui]**(https://github.com/Project-Sloth/ps-ui)**
+**[ps-ui](https://github.com/Project-Sloth/ps-ui)**
  
 OPTIONAL: (Configured to work with okokNotify as well as base qb-core notifications).
 
