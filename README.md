@@ -32,11 +32,13 @@ A standalone resource where the player accesses a computer system (can be change
 
 3. Add the following items to qb-core/shared/items.lua 
 
+```lua
 	['blankusb'] 				 	= {['name'] = 'blankusb', 			  	  	['label'] = 'Blank USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'blankusb.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Non-descript USB, wonder if there is anything on it?'},
 	['usb1'] 				 	 	= {['name'] = 'usb1', 			  	  		['label'] = 'Blue USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbblue.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it blue.'},
 	['usb2'] 				 	 	= {['name'] = 'usb2', 			  	  		['label'] = 'Red USB', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbred.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it red.'},
 	['usb3'] 				 	 	= {['name'] = 'usb3', 			  	  		['label'] = 'Pink USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbpink.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it pink.'},
 	['usb4'] 				 		= {['name'] = 'usb4', 			  	  		['label'] = 'Green USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbgreen.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it green.'},
+```
 
 Please note: 
 A. IF YOU ARE RUNNING MZ-BINS YOU DO NOT NEED TO RE-ADD THE "BLANKUSB" - BY DEFAULT, BLANKUSBs ARE FOUND IN BINS; 
