@@ -69,7 +69,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl0", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem6].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem6], "add", 1)
     end
-    Wait(1000)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -108,7 +107,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl1", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -147,7 +145,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl2", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -186,7 +183,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl3", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -225,7 +221,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl4", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -264,7 +259,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl5", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -303,7 +297,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl6", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -342,7 +335,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl7", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -375,7 +367,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvl8", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
@@ -414,7 +405,6 @@ RegisterNetEvent("mz-hacks:server:SuccessBlankUSBlvlNOXP", function()
         Player.Functions.AddItem(QBCore.Shared.Items[Config.USBitem7].name, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Config.USBitem7], "add", 1)
     end
-    Wait(400)
     if Config.NotifyType == 'qb' then
         TriggerClientEvent('QBCore:Notify', src, 'Data successfully uploaded to USB...', 'success', 3500)  
     elseif Config.NotifyType == "okok" then
