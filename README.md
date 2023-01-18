@@ -49,6 +49,7 @@ OPTIONAL: (Configured to work with okokNotify as well as base qb-core notificati
 	['usb2'] 				 	 	= {['name'] = 'usb2', 			  	  		['label'] = 'Red USB', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbred.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it red.'},
 	['usb3'] 				 	 	= {['name'] = 'usb3', 			  	  		['label'] = 'Pink USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbpink.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it pink.'},
 	['usb4'] 				 		= {['name'] = 'usb4', 			  	  		['label'] = 'Green USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'usbgreen.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it green.'},
+	['yellowdongle'] 				 		= {['name'] = 'yellowdongle', 			  	  		['label'] = 'Yellow USB', 				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'yellow_dongle.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'The Blank USB has downloaded a particular encryption marking it yellow.'},
 ```
 
 Please note: 
