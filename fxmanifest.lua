@@ -5,7 +5,7 @@ game 'gta5'
 
 description 'mz-hacks - a resource to load blank USBs with data for other server/city purposes.'
 author 'Mr_Zain#4139'
-version '1.0'
+version '1.1'
 
 client_scripts {
     'client/main.lua',

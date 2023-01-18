@@ -232,12 +232,37 @@ elseif not Config.AllowMHacking and not Config.AllowScramble and Config.AllowVAR
     end)         
 end 
 
+CreateThread(function()
+    exports['qb-target']:AddBoxZone("usbhacks_trigger_glow", vector3(-87.09, 6238.09, 31.09), 1.65, 1, {
+        name = "usbhacks_trigger_glow",
+        heading = 303,
+        debugPoly = false,
+        minZ = 27.89,
+        maxZ = 31.89,
+        }, {
+            options = { 
+            {
+                type = "client",
+                event = 'mz-hacks:client:StartHackPathHack',
+                icon = 'fas fa-laptop',
+                label = 'Hack Slaughterhouse Database (Path Hack)'
+            },
+            {
+                type = "client",
+                event = 'mz-hacks:client:StartHackSpotHack',
+                icon = 'fas fa-laptop',
+                label = 'Hack Slaughterhouse Database (Spot Hack)'
+            },
+        },
+        distance = 1.2,
+    })
+end)  
+
 ------------
 --MHACKING--
 ------------
 
-RegisterNetEvent('mz-hacks:client:StartHackBlankUSB')
-AddEventHandler('mz-hacks:client:StartHackBlankUSB', function()
+RegisterNetEvent('mz-hacks:client:StartHackBlankUSB', function()
     if QBCore.Functions.HasItem("blankusb") then
 		TriggerEvent('animations:client:EmoteCommandStart', {"type3"})
         local accesstime = math.random(Config.LoadUSBlow * 1000, Config.LoadUSBhigh * 1000)
@@ -258,44 +283,28 @@ AddEventHandler('mz-hacks:client:StartHackBlankUSB', function()
             TriggerEvent("mhacking:show")
             if Config.mzskills then 
                 exports["mz-skills"]:CheckSkill("Hacking", 12800, function(hasskill)
-                    if hasskill then
-                        lvl8 = true
-                    end
+                    if hasskill then lvl8 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 6400, function(hasskill)
-                    if hasskill then
-                        lvl7 = true
-                    end
+                    if hasskill then lvl7 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 3200, function(hasskill)
-                    if hasskill then
-                        lvl6 = true
-                    end
+                    if hasskill then lvl6 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 1600, function(hasskill)
-                    if hasskill then
-                        lvl5 = true
-                    end
+                    if hasskill then lvl5 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 800, function(hasskill)
-                    if hasskill then
-                        lvl4 = true
-                    end
+                    if hasskill then lvl4 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 400, function(hasskill)
-                    if hasskill then
-                        lvl3 = true
-                    end
+                    if hasskill then lvl3 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 200, function(hasskill)
-                    if hasskill then
-                        lvl2 = true
-                    end
+                    if hasskill then lvl2 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
-                    if hasskill then
-                        lvl1 = true
-                    end
+                    if hasskill then lvl1 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
                     if hasskill then
@@ -375,50 +384,30 @@ function ExchangeSuccessBlankUSB()
         end
         if Config.mzskills then 
             exports["mz-skills"]:CheckSkill("Hacking", 12800, function(hasskill)
-                if hasskill then
-                    lvl8 = true
-                end
+                if hasskill then lvl8 = true end
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 6400, function(hasskill)
-                if hasskill then
-                    lvl7 = true
-                end
+                if hasskill then lvl7 = true end 
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 3200, function(hasskill)
-                if hasskill then
-                    lvl6 = true
-                end
+                if hasskill then lvl6 = true end
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 1600, function(hasskill)
-                if hasskill then
-                    lvl5 = true
-                end
+                if hasskill then lvl5 = true end
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 800, function(hasskill)
-                if hasskill then
-                    lvl4 = true
-                end
+                if hasskill then lvl4 = true end
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 400, function(hasskill)
-                if hasskill then
-                    lvl3 = true
-                end
+                if hasskill then lvl3 = true end 
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 200, function(hasskill)
-                if hasskill then
-                    lvl2 = true
-                end
+                if hasskill then lvl2 = true end 
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
-                if hasskill then
-                    lvl1 = true
-                end
+                if hasskill then lvl1 = true end
             end)
-            exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
-                if hasskill then
-                    lvl0 = true
-                end
-            end)
+            Wait(500)
             if lvl8 then        
                 TriggerServerEvent('mz-hacks:server:SuccessBlankUSBlvl8')
                 lvl8 = false 
@@ -490,8 +479,7 @@ end
 --SCRAMBLER--
 -------------
 
-RegisterNetEvent('mz-hacks:client:StartHackScrambler')
-AddEventHandler('mz-hacks:client:StartHackScrambler', function()
+RegisterNetEvent('mz-hacks:client:StartHackScrambler', function()
     if QBCore.Functions.HasItem("blankusb") then
 		TriggerEvent('animations:client:EmoteCommandStart', {"type3"})
         local accesstime = math.random(Config.LoadUSBlow * 1000, Config.LoadUSBhigh * 1000)
@@ -511,50 +499,30 @@ AddEventHandler('mz-hacks:client:StartHackScrambler', function()
 			TriggerEvent('animations:client:EmoteCommandStart', {"c"})
             if Config.mzskills then 
                 exports["mz-skills"]:CheckSkill("Hacking", 12800, function(hasskill)
-                    if hasskill then
-                        lvl8 = true
-                    end
+                    if hasskill then lvl8 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 6400, function(hasskill)
-                    if hasskill then
-                        lvl7 = true
-                    end
+                    if hasskill then lvl7 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 3200, function(hasskill)
-                    if hasskill then
-                        lvl6 = true
-                    end
+                    if hasskill then lvl6 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 1600, function(hasskill)
-                    if hasskill then
-                        lvl5 = true
-                    end
+                    if hasskill then lvl5 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 800, function(hasskill)
-                    if hasskill then
-                        lvl4 = true
-                    end
+                    if hasskill then lvl4 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 400, function(hasskill)
-                    if hasskill then
-                        lvl3 = true
-                    end
+                    if hasskill then lvl3 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 200, function(hasskill)
-                    if hasskill then
-                        lvl2 = true
-                    end
+                    if hasskill then lvl2 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
-                    if hasskill then
-                        lvl1 = true
-                    end
+                    if hasskill then lvl1 = true end
                 end)
-                exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
-                    if hasskill then
-                        lvl0 = true
-                    end
-                end)
+                Wait(500)
                 if lvl8 then        
                     exports['ps-ui']:Scrambler(function(success)
                         if success then
@@ -702,8 +670,7 @@ end)
 --VAR HACK--
 ------------
 
-RegisterNetEvent('mz-hacks:client:StartHackVARHack')
-AddEventHandler('mz-hacks:client:StartHackVARHack', function()
+RegisterNetEvent('mz-hacks:client:StartHackVARHack', function()
     if QBCore.Functions.HasItem("blankusb") then
 		TriggerEvent('animations:client:EmoteCommandStart', {"type3"})
         local accesstime = math.random(Config.LoadUSBlow * 1000, Config.LoadUSBhigh * 1000)
@@ -723,50 +690,30 @@ AddEventHandler('mz-hacks:client:StartHackVARHack', function()
             Wait(500)
             if Config.mzskills then 
                 exports["mz-skills"]:CheckSkill("Hacking", 12800, function(hasskill)
-                    if hasskill then
-                        lvl8 = true
-                    end
+                    if hasskill then lvl8 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 6400, function(hasskill)
-                    if hasskill then
-                        lvl7 = true
-                    end
+                    if hasskill then lvl7 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 3200, function(hasskill)
-                    if hasskill then
-                        lvl6 = true
-                    end
+                    if hasskill then lvl6 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 1600, function(hasskill)
-                    if hasskill then
-                        lvl5 = true
-                    end
+                    if hasskill then lvl5 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 800, function(hasskill)
-                    if hasskill then
-                        lvl4 = true
-                    end
+                    if hasskill then lvl4 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 400, function(hasskill)
-                    if hasskill then
-                        lvl3 = true
-                    end
+                    if hasskill then lvl3 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 200, function(hasskill)
-                    if hasskill then
-                        lvl2 = true
-                    end
+                    if hasskill then lvl2 = true end 
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
-                    if hasskill then
-                        lvl1 = true
-                    end
+                    if hasskill then lvl1 = true end
                 end)
-                exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
-                    if hasskill then
-                        lvl0 = true
-                    end
-                end)
+                Wait(500)
                 if lvl8 then        
                     exports['ps-ui']:VarHack(function(success)
                         if success then
@@ -907,6 +854,358 @@ AddEventHandler('mz-hacks:client:StartHackVARHack', function()
         TriggerEvent('inventory:client:requiredItems', requiredItems, true)
         Wait(2000)
 		TriggerEvent('inventory:client:requiredItems', requiredItems, false)
+    end
+end)
+
+-------------
+--PATH HACK--
+-------------
+
+RegisterNetEvent('mz-hacks:client:StartHackPathHack', function()
+    if Config.GlowHacking then 
+        if QBCore.Functions.HasItem("blankusb") then
+            TriggerEvent('animations:client:EmoteCommandStart', {"type3"})
+            local accesstime = math.random(Config.LoadUSBlow * 1000, Config.LoadUSBhigh * 1000)
+            QBCore.Functions.Progressbar("deliver_reycle_package", "Accessing Slaughterhouse database...", accesstime, false, true, {
+                disableMovement = true,
+                disableCarMovement = true,
+                disableMouse = false,
+                disableCombat = true,
+            }, {}, {}, {}, function() -- Done
+                TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+                Wait(500)
+                if Config.NotifyType == 'qb' then
+                    QBCore.Functions.Notify("Complete the labrynth in the allocated time.", "primary", 3500)
+                elseif Config.NotifyType == "okok" then
+                    exports['okokNotify']:Alert("PATH HACK", "Complete the labrynth in the allocated time.", 3500, "info")
+                end
+                Wait(500)
+                if Config.mzskills then 
+                    exports["mz-skills"]:CheckSkill("Hacking", 12800, function(hasskill)
+                        if hasskill then lvl8 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 6400, function(hasskill)
+                        if hasskill then lvl7 = true end 
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 3200, function(hasskill)
+                        if hasskill then lvl6 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 1600, function(hasskill)
+                        if hasskill then lvl5 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 800, function(hasskill)
+                        if hasskill then lvl4 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 400, function(hasskill)
+                        if hasskill then lvl3 = true end 
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 200, function(hasskill)
+                        if hasskill then lvl2 = true end 
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
+                        if hasskill then lvl1 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
+                        if hasskill then lvl0 = true end 
+                    end)
+                    Wait(500)
+                    if lvl8 then
+                        local settings = {gridSize = Config.pathGridSizelvl8, lives = Config.pathLiveslvl8, timeLimit = Config.pathTimelvl8 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl8 = false 
+                    elseif lvl7 then
+                        local settings = {gridSize = Config.pathGridSizelvl7, lives = Config.pathLiveslvl7, timeLimit = Config.pathTimelvl7 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl7 = false 
+                    elseif lvl6 then
+                        local settings = {gridSize = Config.pathGridSizelvl6, lives = Config.pathLiveslvl6, timeLimit = Config.pathTimelvl6 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl6 = false 
+                    elseif lvl5 then 
+                        local settings = {gridSize = Config.pathGridSizelvl5, lives = Config.pathLiveslvl5, timeLimit = Config.pathTimelvl5 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl5 = false 
+                    elseif lvl4 then        
+                        local settings = {gridSize = Config.pathGridSizelvl4, lives = Config.pathLiveslvl4, timeLimit = Config.pathTimelvl4 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl4 = false 
+                    elseif lvl3 then
+                        local settings = {gridSize = Config.pathGridSizelvl3, lives = Config.pathLiveslvl3, timeLimit = Config.pathTimelvl3 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl3 = false 
+                    elseif lvl2 then
+                        local settings = {gridSize = Config.pathGridSizelvl2, lives = Config.pathLiveslvl2, timeLimit = Config.pathTimelvl2 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl2 = false 
+                    elseif lvl1 then 
+                        local settings = {gridSize = Config.pathGridSizelvl1, lives = Config.pathLiveslvl1, timeLimit = Config.pathTimelvl1 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl1 = false 
+                    elseif lvl0 then 
+                        local settings = {gridSize = Config.pathGridSizelvl0, lives = Config.pathLiveslvl0, timeLimit = Config.pathTimelvl0 * 1000}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "path")        
+                        lvl0 = false  
+                    end
+                elseif not Config.mzskills then 
+                    local settings = {gridSize = Config.pathGridSizeNOXP, lives = Config.pathLivesNOXP, timeLimit = Config.pathTimeNOXP * 1000}
+                    exports["glow_minigames"]:StartMinigame(function(success)
+                        if success then
+                            ExchangeSuccessBlankUSB()
+                        else
+                            ExchangeFailBlankUSB()
+                        end
+                    end, "path")        
+                end
+            end)
+        else
+            local requiredItems = {
+                [1] = {name = QBCore.Shared.Items["blankusb"]["name"], image = QBCore.Shared.Items["blankusb"]["image"]},
+            }
+            if Config.NotifyType == 'qb' then
+                QBCore.Functions.Notify("You need something to extract information from the database...", "error", 3500)
+            elseif Config.NotifyType == "okok" then
+                exports['okokNotify']:Alert("NEED BLANK USB", "You need something to extract information from the database...", 3500, "error")
+            end
+            TriggerEvent('inventory:client:requiredItems', requiredItems, true)
+            Wait(2000)
+            TriggerEvent('inventory:client:requiredItems', requiredItems, false)
+        end
+    else 
+        if Config.NotifyType == 'qb' then
+            QBCore.Functions.Notify("This PC isn't functioning?", "error", 3500)
+        elseif Config.NotifyType == "okok" then
+            exports['okokNotify']:Alert("NO HACKS?", "This PC isn't functioning?", 3500, "error")
+        end
+    end 
+end)
+
+-------------
+--SPOT HACK--
+-------------
+
+RegisterNetEvent('mz-hacks:client:StartHackSpotHack', function()
+    if Config.GlowHacking then 
+        if QBCore.Functions.HasItem("blankusb") then
+            TriggerEvent('animations:client:EmoteCommandStart', {"type3"})
+            local accesstime = math.random(Config.LoadUSBlow * 1000, Config.LoadUSBhigh * 1000)
+            QBCore.Functions.Progressbar("deliver_reycle_package", "Accessing Slaughterhouse database...", accesstime, false, true, {
+                disableMovement = true,
+                disableCarMovement = true,
+                disableMouse = false,
+                disableCombat = true,
+            }, {}, {}, {}, function() -- Done
+                TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+                Wait(500)
+                if Config.NotifyType == 'qb' then
+                    QBCore.Functions.Notify("Complete the labrynth in the allocated time.", "primary", 3500)
+                elseif Config.NotifyType == "okok" then
+                    exports['okokNotify']:Alert("PATH HACK", "Complete the labrynth in the allocated time.", 3500, "info")
+                end
+                Wait(500)
+                if Config.mzskills then 
+                    exports["mz-skills"]:CheckSkill("Hacking", 12800, function(hasskill)
+                        if hasskill then lvl8 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 6400, function(hasskill)
+                        if hasskill then lvl7 = true end 
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 3200, function(hasskill)
+                        if hasskill then lvl6 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 1600, function(hasskill)
+                        if hasskill then lvl5 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 800, function(hasskill)
+                        if hasskill then lvl4 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 400, function(hasskill)
+                        if hasskill then lvl3 = true end 
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 200, function(hasskill)
+                        if hasskill then lvl2 = true end 
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
+                        if hasskill then lvl1 = true end
+                    end)
+                    exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
+                        if hasskill then lvl0 = true end 
+                    end)
+                    Wait(500)
+                    if lvl8 then
+                        local settings = {gridSize = Config.spotGridSizelvl8, timeLimit = Config.spotTimeLimitlvl8 * 1000, charSet = Config.spotCharSetlvl8, required = Config.spotRequiredlvl8}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")        
+                        lvl8 = false 
+                    elseif lvl7 then
+                        local settings = {gridSize = Config.spotGridSizelvl7, timeLimit = Config.spotTimeLimitlvl7 * 1000, charSet = Config.spotCharSetlvl7, required = Config.spotRequiredlvl7}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")         
+                        lvl7 = false 
+                    elseif lvl6 then
+                        local settings = {gridSize = Config.spotGridSizelvl6, timeLimit = Config.spotTimeLimitlvl6 * 1000, charSet = Config.spotCharSetlvl6, required = Config.spotRequiredlvl6}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")         
+                        lvl6 = false 
+                    elseif lvl5 then 
+                        local settings = {gridSize = Config.spotGridSizelvl5, timeLimit = Config.spotTimeLimitlvl5 * 1000, charSet = Config.spotCharSetlvl5, required = Config.spotRequiredlvl5}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")         
+                        lvl5 = false 
+                    elseif lvl4 then        
+                        local settings = {gridSize = Config.spotGridSizelvl4, timeLimit = Config.spotTimeLimitlvl4 * 1000, charSet = Config.spotCharSetlvl4, required = Config.spotRequiredlvl4}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")         
+                        lvl4 = false 
+                    elseif lvl3 then
+                        local settings = {gridSize = Config.spotGridSizelvl3, timeLimit = Config.spotTimeLimitlvl3 * 1000, charSet = Config.spotCharSetlvl3, required = Config.spotRequiredlvl3}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")        
+                        lvl3 = false 
+                    elseif lvl2 then
+                        local settings = {gridSize = Config.spotGridSizelvl2, timeLimit = Config.spotTimeLimitlvl2 * 1000, charSet = Config.spotCharSetlvl2, required = Config.spotRequiredlvl2}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")         
+                        lvl2 = false 
+                    elseif lvl1 then 
+                        local settings = {gridSize = Config.spotGridSizelvl1, timeLimit = Config.spotTimeLimitlvl1 * 1000, charSet = Config.spotCharSetlvl1, required = Config.spotRequiredlvl1}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")        
+                        lvl1 = false 
+                    elseif lvl0 then 
+                        local settings = {gridSize = Config.spotGridSizelvl0, timeLimit = Config.spotTimeLimitlvl0 * 1000, charSet = Config.spotCharSetlvl0, required = Config.spotRequiredlvl0}
+                        exports["glow_minigames"]:StartMinigame(function(success)
+                            if success then
+                                ExchangeSuccessBlankUSB()
+                            else
+                                ExchangeFailBlankUSB()
+                            end
+                        end, "spot")         
+                        lvl0 = false  
+                    end
+                elseif not Config.mzskills then 
+                    local settings = {gridSize = Config.spotGridSizeNOXP, timeLimit = Config.spotTimeLimitNOXP * 1000, charSet = Config.spotCharSetNOXP, required = Config.spotRequiredNOXP}
+                    exports["glow_minigames"]:StartMinigame(function(success)
+                        if success then
+                            ExchangeSuccessBlankUSB()
+                        else
+                            ExchangeFailBlankUSB()
+                        end
+                    end, "spot")       
+                end
+            end)
+        else
+            local requiredItems = {
+                [1] = {name = QBCore.Shared.Items["blankusb"]["name"], image = QBCore.Shared.Items["blankusb"]["image"]},
+            }
+            if Config.NotifyType == 'qb' then
+                QBCore.Functions.Notify("You need something to extract information from the database...", "error", 3500)
+            elseif Config.NotifyType == "okok" then
+                exports['okokNotify']:Alert("NEED BLANK USB", "You need something to extract information from the database...", 3500, "error")
+            end
+            TriggerEvent('inventory:client:requiredItems', requiredItems, true)
+            Wait(2000)
+            TriggerEvent('inventory:client:requiredItems', requiredItems, false)
+        end
+    else 
+        if Config.NotifyType == 'qb' then
+            QBCore.Functions.Notify("This PC isn't functioning?", "error", 3500)
+        elseif Config.NotifyType == "okok" then
+            exports['okokNotify']:Alert("NO HACKS?", "This PC isn't functioning?", 3500, "error")
+        end
     end
 end)
 
