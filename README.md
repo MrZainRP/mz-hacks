@@ -27,7 +27,7 @@ A standalone resource where the player accesses a computer system (can be change
 
 **[ps-ui](https://github.com/Project-Sloth/ps-ui)**
 
-If you want to run two additional hack styles from glow_minigames - you will need that resource: **[glow_minigames](https://github.com/christikat/glow_minigames)**
+**(v1.1)** If you want to run two additional hack styles from glow_minigames - you will need that resource: **[glow_minigames](https://github.com/christikat/glow_minigames)**
  
 OPTIONAL: (Configured to work with okokNotify as well as base qb-core notifications).
 
