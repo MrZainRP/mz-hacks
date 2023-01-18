@@ -57,19 +57,23 @@ A. IF YOU ARE RUNNING MZ-BINS YOU DO NOT NEED TO RE-ADD THE "BLANKUSB" - BY DEFA
 
 B. "TROJAN_USB" AND "CRYPTOSTICK" ARE DEFAULT QB-CORE ITEMS; 
 
-C. "USB2" IS USED BY THE MZ-STOREROBBERY FORK;
+C. "USB1"  IS USED BY THE ?;
 
-D. "USB3" IS USED BY DRUG RELATED MZ-RESOURCES (E.G. MZ-COKE, MZ-HEROIN, MZ-METH, MZ-LSD);
+D. "USB2" IS USED BY THE MZ-STOREROBBERY FORK;
 
-E. "YELLOWDONGLE" IS USED BY MZ-ATMROBBERY; 
+E. "USB3" IS USED BY DRUG RELATED MZ-RESOURCES (E.G. MZ-COKE, MZ-HEROIN, MZ-METH, MZ-LSD);
+
+F. "USB4" IS USED BY THE MZ-BANKROBBERY;
+
+G. "YELLOWDONGLE" IS USED BY MZ-ATMROBBERY;
 
 4. If your server does not have any use for some of these USB items please replace them in the config.lua. 
 
-## C. INVENTORY IMAGES
+## H. INVENTORY IMAGES
 
 5. Add the images which appear in the "images" folder to your inventory images folder. If using lj-inventory, add the images to: lj-inventory/html/images/ - if you are using qb-inventory, add the images to qb-inventory/html/images/
 
-## D. DOORS
+## I. DOORS
 
 6. If you are using the default location to allow access to the hacking room, add this to your doorlock config file:
 
@@ -91,7 +95,7 @@ E. "YELLOWDONGLE" IS USED BY MZ-ATMROBBERY;
 
 7. PLEASE NOTE: YOU CAN ALTERNATIVELY SIMPLY ADD THE CONFIG FILE WHICH COMES WITH THIS RESOURCE TO YOUR QB-DOORLOCK/CONFIGS FOLDER
 
-## E. FINALISATION 
+## J. FINALISATION 
 
 8. If you attend to all of the above steps you will need to restart the server in order for the new added items to be recognised by qb-core. 
 
