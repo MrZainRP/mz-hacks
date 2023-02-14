@@ -71,18 +71,21 @@ if Config.AllowMHacking and Config.AllowScramble and Config.AllowVARHacking then
             }, {
                 options = { 
                 {
+                    num = 1, 
                     type = "client",
                     event = "mz-hacks:client:StartHackBlankUSB",
                     icon = 'fas fa-laptop',
                     label = 'Hack Slaughterhouse Database (mHacking)'
                 },
                 {
+                    num = 2, 
                     type = "client",
                     event = 'mz-hacks:client:StartHackScrambler',
                     icon = 'fas fa-laptop',
                     label = 'Hack Slaughterhouse Database (Scrambler)'
                 },
                 {
+                    num = 3, 
                     type = "client",
                     event = 'mz-hacks:client:StartHackVARHack',
                     icon = 'fas fa-laptop',
@@ -307,9 +310,7 @@ RegisterNetEvent('mz-hacks:client:StartHackBlankUSB', function()
                     if hasskill then lvl1 = true end
                 end)
                 exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
-                    if hasskill then
-                        lvl0 = true
-                    end
+                    if hasskill then lvl0 = true end
                 end)
                 if lvl8 then        
                     TriggerEvent("mhacking:start", math.random(Config.lowhacklvl8, Config.highhacklvl8), Config.hacktimelvl8, HackingSuccessBlankUSB)
@@ -406,6 +407,9 @@ function ExchangeSuccessBlankUSB()
             end)
             exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
                 if hasskill then lvl1 = true end
+            end)
+            exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
+                if hasskill then lvl0 = true end
             end)
             Wait(500)
             if lvl8 then        
@@ -522,6 +526,9 @@ RegisterNetEvent('mz-hacks:client:StartHackScrambler', function()
                 exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
                     if hasskill then lvl1 = true end
                 end)
+                exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
+                    if hasskill then lvl0 = true end
+                end)
                 Wait(500)
                 if lvl8 then        
                     exports['ps-ui']:Scrambler(function(success)
@@ -613,6 +620,8 @@ RegisterNetEvent('mz-hacks:client:StartHackScrambler', function()
                             lvl0 = false
                         end
                     end, Config.stypelvl0, Config.ssecondslvl0, Config.smodifylvl0)
+                else 
+                    print("Your mz-skills is not properly configured, make sure you have 'mz-skills' and have opened the .sql file")
                 end
             elseif not Config.mzskills then 
                 local hackchance = math.random(1, 4)
@@ -713,6 +722,9 @@ RegisterNetEvent('mz-hacks:client:StartHackVARHack', function()
                 exports["mz-skills"]:CheckSkill("Hacking", 100, function(hasskill)
                     if hasskill then lvl1 = true end
                 end)
+                exports["mz-skills"]:CheckSkill("Hacking", 0, function(hasskill)
+                    if hasskill then lvl0 = true end
+                end)
                 Wait(500)
                 if lvl8 then        
                     exports['ps-ui']:VarHack(function(success)
@@ -804,6 +816,8 @@ RegisterNetEvent('mz-hacks:client:StartHackVARHack', function()
                             lvl0 = false
                         end
                      end, Config.Blocknumberlvl0, Config.VARtimelvl0)
+                else 
+                    print("Your mz-skills is not properly configured, make sure you have 'mz-skills' and have opened the .sql file")
                 end
             elseif not Config.mzskills then 
                 local hackchance = math.random(1, 4)
